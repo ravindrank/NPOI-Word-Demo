@@ -35,11 +35,13 @@ namespace WordDemo.Tests
             table.SetInsideHBorder(XWPFTable.XWPFBorderType.NONE, 0, 0, "WHITE");
             table.SetInsideVBorder(XWPFTable.XWPFBorderType.NONE, 0, 0, "WHITE");
 
+            var currentTable = table.GetCTTbl();
             // Assert
-            Assert.Equal(XWPFTable.XWPFBorderType.NONE, table.GetCTTbl().tblPr.tblBorders.bottom.border);
-            Assert.Equal(XWPFTable.XWPFBorderType.NONE, table.GetCTTbl().tblPr.tblBorders.top.border);
-            Assert.Equal(XWPFTable.XWPFBorderType.NONE, table.GetCTTbl().tblPr.tblBorders.left.border);
-            Assert.Equal(XWPFTable.XWPFBorderType.NONE, table.GetCTTbl().tblPr.tblBorders.right.border);
+            Assert.Equal((ulong) 0, currentTable.tblPr.tblBorders.bottom.sz );
+            Assert.Equal((ulong)0, currentTable.tblPr.tblBorders.top.sz);
+            Assert.Equal((ulong)0, currentTable.tblPr.tblBorders.left.sz);
+            Assert.Equal((ulong)0, currentTable.tblPr.tblBorders.right.sz);
+
         }
 
         [Fact]
