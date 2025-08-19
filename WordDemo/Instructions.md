@@ -7,6 +7,7 @@ A quick demo of using NPOI (https://github.com/tonyqus/NPOI) to generate a Word 
 ## For MVP
 
 - Create a program to Generate a word document on the fly/programmatically
+- Upgrade code from .net 8 to .net 9
 - Use .NET and C#
 - Make it modular and reusable
 - Generate Unit test cases to test and validate the functionality
